@@ -8,14 +8,15 @@ export const getAllTasks = async () => {
 
 export const insertTask = async ({ task, creation_date, state }) => {
   const { task, creation_date, state } = values;
-  if (!task || !creation_date || !state) return false;
+  if (!task || !creation_date || !state) return null;
   await model.create({ task, creation_date, state });
   return true;
-}
+};
 
 export const updateTask = async (id, { task, creation_date, state }) => {
-  const { task, creation_date, state } = values;
-  if (!task || !creation_date || !state) return false;
+  const findTask = await model.findOne({ where: { id } });
+  if (findTask.length < 1) return null;
+
   const [updated] = await model.update(
     { 
       task, 

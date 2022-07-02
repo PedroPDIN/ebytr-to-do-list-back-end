@@ -5,7 +5,7 @@ import {
   deletedTask,
 } from './task.service';
 
-export default SERVICES = {
+export default services = {
   getAllTasks,
   insertTask,
   updateTask,
