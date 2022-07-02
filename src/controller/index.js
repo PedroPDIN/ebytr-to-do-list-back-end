@@ -2,14 +2,14 @@ const {
   getAllTasks,
   insertTask,
   updateTask,
-  deleteTask,
+  removeTask,
 } = require('./task.controller');
 
 const CONTROLLERS = {
   getAllTasks,
   insertTask,
   updateTask,
-  deleteTask,
+  removeTask,
 };
 
 module.exports = CONTROLLERS;

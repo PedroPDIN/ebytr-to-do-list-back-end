@@ -6,6 +6,6 @@ const routeTask = route.Router();
 routeTask.get('/', CONTROLLERS.getAllTasks);
 routeTask.post('/', CONTROLLERS.insertTask);
 routeTask.put('/:id', CONTROLLERS.updateTask);
-routeTask.delete('/:id', CONTROLLERS.deleteTask);
+routeTask.delete('/:id', CONTROLLERS.removeTask);
 
 module.exports = routeTask;

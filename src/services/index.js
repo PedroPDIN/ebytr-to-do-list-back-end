@@ -2,14 +2,14 @@ const {
   getAllTasks,
   insertTask,
   updateTask,
-  deletedTask,
+  removeTask,
 } = require('./task.service');
 
 const SERVICES = {
   getAllTasks,
   insertTask,
   updateTask,
-  deletedTask,
+  removeTask,
 };
 
 module.exports = SERVICES;

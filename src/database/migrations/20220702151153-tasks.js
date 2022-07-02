@@ -3,7 +3,7 @@ module.exports = {
     await queryInterface.createTable('Tasks', {
       id: {
         allowNull: false,
-        autoInclement: true,
+        autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
