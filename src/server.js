@@ -1,4 +1,4 @@
-const app = require('./app');
+const app = require('.');
 
 const POST = 3000;
 
