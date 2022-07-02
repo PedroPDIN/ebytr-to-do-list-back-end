@@ -1,13 +1,15 @@
-import { 
+const { 
   getAllTasks,
   insertTask,
   updateTask,
   deletedTask,
-} from './task.service';
+} = require('./task.service');
 
-export default services = {
+const SERVICES = {
   getAllTasks,
   insertTask,
   updateTask,
   deletedTask,
 };
+
+module.exports = SERVICES;

@@ -9,4 +9,4 @@ const Task = (sequelize, DataTypes) => {
   return task;
 };
 
-export default Task;
+module.exports = Task;

@@ -1,13 +1,15 @@
-import {
+const {
   getAllTasks,
   insertTask,
   updateTask,
   deleteTask,
-} from './task.controller';
+} = require('./task.controller');
 
-export default controller = {
+const CONTROLLERS = {
   getAllTasks,
   insertTask,
   updateTask,
   deleteTask,
 };
+
+module.exports = CONTROLLERS;

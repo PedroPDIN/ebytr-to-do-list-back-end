@@ -1,19 +1,18 @@
-import model from '../database/models/tasks.model'
+const model = require('../database/models/tasks.model');
 
-export const getAllTasks = async () => {
+const getAllTasks = async () => {
   const tasks = await model.findAll();
   if (tasks.length < 1) return null;
   return tasks;
 };
 
-export const insertTask = async ({ task, creation_date, state }) => {
-  const { task, creation_date, state } = values;
+const insertTask = async ({ task, creation_date, state }) => {
   if (!task || !creation_date || !state) return null;
   await model.create({ task, creation_date, state });
   return true;
 };
 
-export const updateTask = async (id, { task, creation_date, state }) => {
+const updateTask = async (id, { task, creation_date, state }) => {
   const findTask = await model.findOne({ where: { id } });
   if (findTask.length < 1) return null;
 
@@ -27,7 +26,14 @@ export const updateTask = async (id, { task, creation_date, state }) => {
   return updated;
 };
 
-export const deleteTask = async (id) => {
+const deleteTask = async (id) => {
   const deletedTask = await model.destroy({ where: { id } });
   return deletedTask;
+};
+
+module.exports = {
+  getAllTasks,
+  insertTask,
+  updateTask,
+  deleteTask,
 };
