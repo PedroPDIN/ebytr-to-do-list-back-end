@@ -19,7 +19,7 @@ module.exports = {
         field: 'creation_date',
       },
 
-      status: {
+      state: {
         allowNull: false,
         type: Sequelize.STRING,
       },
