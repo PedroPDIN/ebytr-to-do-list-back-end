@@ -1,5 +1,5 @@
 const app = require('.');
 
-const POST = 3000;
+const PORT = process.env.PORT || 3000;
 
-app.listen(POST, () => console.log(`Rodando na posta: ${ POST }`));
+app.listen(PORT, () => console.log(`Rodando na posta: ${ PORT }`));
