@@ -6,7 +6,7 @@ const getAllTasks = async (_req, res) => {
     if (!tasks) return res.status(404).json({ message: 'task not found' });
     return res.status(200).json(tasks);
   } catch (error) {
-    return res.status(500).json({ message: 'server error' });
+    return res.status(500).json({ message: error.message, stack: error.stack });
   };
 };
 
