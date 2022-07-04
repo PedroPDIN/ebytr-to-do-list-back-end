@@ -2,7 +2,7 @@ const { Task } = require('../database/models');
 
 const getAllTasks = async () => {
   const tasks = await Task.findAll();
-  if (tasks.length < 1) return null;
+  // if (tasks.length < 1) return null;
   return tasks;
 };
 
