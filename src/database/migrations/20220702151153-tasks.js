@@ -13,15 +13,17 @@ module.exports = {
         type: Sequelize.STRING,
       },
 
+      status: {
+      allowNull: false,
+      type: Sequelize.STRING,
+
       creationDate: {
         allowNull: false,
         type: Sequelize.DATE,
         field: 'creation_date',
+        defaultValue: DataTypes.NOW,
       },
 
-        status: {
-        allowNull: false,
-        type: Sequelize.STRING,
       },
     });
   },
