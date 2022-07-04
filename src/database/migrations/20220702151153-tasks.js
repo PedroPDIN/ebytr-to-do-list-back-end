@@ -19,7 +19,7 @@ module.exports = {
         field: 'creation_date',
       },
 
-      state: {
+        status: {
         allowNull: false,
         type: Sequelize.STRING,
       },
@@ -27,6 +27,6 @@ module.exports = {
   },
 
   async down(queryInterface, _Sequelize) {
-    await queryInterface.dropTable('users');
+    await queryInterface.dropTable('Task');
   },
 };
