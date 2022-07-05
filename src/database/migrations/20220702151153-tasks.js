@@ -14,16 +14,14 @@ module.exports = {
       },
 
       status: {
-      allowNull: false,
-      type: Sequelize.STRING,
+        allowNull: false,
+        type: Sequelize.STRING,
+      },
 
       creationDate: {
         allowNull: false,
         type: Sequelize.DATE,
         field: 'creation_date',
-        defaultValue: DataTypes.NOW,
-      },
-
       },
     });
   },

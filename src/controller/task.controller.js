@@ -6,7 +6,7 @@ const getAllTasks = async (_req, res) => {
     return res.status(200).json(tasks);
   } catch (error) {
     return res.status(500).json({ message: 'server error' });
-  };
+  }
 };
 
 const insertTask = async (req, res) => {
@@ -18,7 +18,7 @@ const insertTask = async (req, res) => {
     return res.status(201).json(task);
   } catch (error) {
     return res.status(500).json({ message: 'server error' });
-  };
+  }
 };
 
 const updateTask = async (req, res) => {
@@ -31,7 +31,7 @@ const updateTask = async (req, res) => {
     return res.status(200).json(task);
   } catch (error) {
     return res.status(500).json({ message: 'server error' });
-  };
+  }
 };
 
 const removeTask = async (req, res) => {
@@ -43,7 +43,7 @@ const removeTask = async (req, res) => {
     return res.status(200).json({ message: 'task removed' });
   } catch (error) {
     return res.status(500).json({ message: 'server error' });
-  };
+  }
 };
 
 module.exports = {
